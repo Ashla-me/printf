@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 
 			if (*format == 'c')
 			{
-				int character = va_arg(all, int);
+				char character = va_arg(all, int);
 
 				_print(character);
 				i++;
@@ -36,6 +36,18 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == '%')
 			{	_print('%');
+				i++;
+			}
+			else if (*format == 'd')
+			{
+				int number = va_arg(all, int);
+				_print(number);
+				i += _print(number);
+			}
+			else if (*format == 'i')
+			{
+				int numeral = va_arg(all, int);
+				_print(numeral);
 				i++;
 			}
 		}
