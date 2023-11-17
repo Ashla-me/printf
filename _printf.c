@@ -7,8 +7,13 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0;
+	unsigned int count = 0, string_count = 0;
 	va_list all;
+
+	if (format == NULL)
+	{
+		return(-1);
+	}
 
 	va_start(all, format);
 	while (*format)
@@ -22,7 +27,7 @@ int _printf(const char *format, ...)
 				char character = va_arg(all, int);
 
 				_print(character);
-				i++;
+				count++;
 			}
 			else if (*format == 's')
 			{	char *str = va_arg(all, char *);
@@ -31,34 +36,38 @@ int _printf(const char *format, ...)
 				{
 					_print(*str);
 					str++;
-					i++;
+					string_count++;
 				}
+				_print(*str);
+				count += string_count;
 			}
 			else if (*format == '%')
-			{	_print('%');
-				i++;
+			{	
+				_print('%');
+				count++;
 			}
 			else if (*format == 'd')
 			{
 				int number = va_arg(all, int);
 				_print(number);
-				i += _print(number);
+				count++;
+
 			}
 			else if (*format == 'i')
 			{
 				int numeral = va_arg(all, int);
 				_print(numeral);
-				i++;
 			}
+			
 		}
 		else
 		{
 			_print(*format);
-			i++;
+			count++;
 		}
 		format++;
 	}
 	va_end(all);
-	return (i);
+	return (count);
 }
 
