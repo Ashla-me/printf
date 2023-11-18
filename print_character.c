@@ -1,15 +1,15 @@
 #include "main.h"
 /**
  * print_char - funtion thats prints a character
- * @c: list of arguments
+ * @lot: list of arguments
  * Return: returns the number of characters
  */
 
 int print_char(va_list lot)
 {
-        char s;
+	char s;
 
-        s = va_arg(lot, int);
-        _print(s);
-        return (1);
+	s = va_arg(lot, int);
+	_print(s);
+	return (1);
 }

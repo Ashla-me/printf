@@ -5,7 +5,7 @@
  * @lot: list of arguments.
  * Return: returns counter.
  */
-	
+
 int print_hex(va_list lot)
 {
 	int i;
@@ -20,19 +20,21 @@ int print_hex(va_list lot)
 		counter++;
 	}
 		counter++;
-		array = malloc(counter *sizeof(int));
+		array = malloc(counter * sizeof(int));
+		if (array == NULL)
+			return (NULL);
 
 	for (i = 0; i < counter; i++)
 	{
 		array[i] = tem % 16;
 		tem /= 16;
 	}
-	
+
 	for (i = counter - 1; i >= 0; i--)
 	{
 		if (array[i] > 9)
-		array[i] = array[i] +7;
-		_print(array[i] +'0');
+		array[i] = array[i] + 39;
+		_print(array[i] + '0');
 	}
 		free(array);
 		return (counter);

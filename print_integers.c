@@ -54,7 +54,7 @@ int print_d(va_list lot)
 	int n = va_arg(lot, int);
 	int num, last = n % 10, digit;
 	int  i = 1;
-	int exp = 1;	
+	int exp = 1;
 
 	n = n / 10;
 	num = n;
