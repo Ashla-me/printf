@@ -8,6 +8,6 @@
 
 int print_37(void)
 {
-        _print(37);
-        return (1);
+	_print(37);
+	return (1);
 }
