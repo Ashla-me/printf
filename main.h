@@ -39,4 +39,5 @@ int print_HEX(va_list lot);
 
 int *_strcpy(char *dest, char *src);
 int _printf(const char *format, ...);
+
 #endif

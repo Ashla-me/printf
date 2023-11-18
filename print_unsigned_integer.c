@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_unsigned_integer - prints unsigned integer
- * @args: list of argument
+ * @lot: list of argument
  * Return: integer
  */
 int print_unsigned_integer(va_list lot)
@@ -11,7 +11,7 @@ int print_unsigned_integer(va_list lot)
 	int  i = 1;
 
 	n = n / 10;
-	num = n;	
+	num = n;
 
 	if (last < 0)
 	{
