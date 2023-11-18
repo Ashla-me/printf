@@ -8,6 +8,6 @@
 
 int print_37(void)
 {
-        _print("%");
+        _print(37);
         return (1);
 }

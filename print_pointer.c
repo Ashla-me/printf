@@ -7,25 +7,25 @@
  */
 int print_pointer(va_list lot)
 {
-	void *p;
+	void *ptr;
 	char *str = "(nil)";
 	long int x;
 	int l;
 	int i;	
 
-	ptr = va_arg(val, void*);
+	ptr = va_arg(lot, void*);
 	if (ptr == NULL)
 	{
-		for (i = 0; s[i]; i++)
+		for (i = 0; str[i]; i++)
 		{
-			_print(s[i]);
+			_print(str[i]);
 		}
 		return (i);
 	}
 
-	x = (unsigned long int)p;
+	x = (unsigned long int)ptr;
 	_print('0');
 	_print('x');
 	l = print_hex_again(x);
-	return (y + 2);
+	return (l + 2);
 }

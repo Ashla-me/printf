@@ -29,7 +29,7 @@ int print_HEX_again(unsigned int num)
 	{
 		if (array[i] > 9)
 			array[i] = array[i] + 7;
-		_putchar(array[i] + '0');
+		_print(array[i] + '0');
 	}
 	free(array);
 	return (counter);

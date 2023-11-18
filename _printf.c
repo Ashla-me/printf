@@ -8,17 +8,17 @@
 int _printf(const char *format, ...)
 {
 	convert p[] = {
-		{"%s", print_string}, {"%c", print_char},
+		{"%s", print_str}, {"%c", print_char},
 		{"%%", print_37},
 		{"%i", print_i}, {"%d", print_d}, {"%r", print_revs},
-		{"%R", print_rot13}, {"%b", print_binary},
+		{"%R", print_rot13}, {"%b", print_bin},
 		{"%u", print_unsigned_integer},
-		{"%o", print_octal_number}, {"%x", print_hex}, {"%X", print_HEX},
+		{"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX},
 		{"%S", print_custom_string}, {"%p", print_pointer}
 	};
 
 
-	va_list lo;
+	va_list lot;
 	int i = 0, j, length = 0;
 
 	va_start(lot, format);
@@ -33,7 +33,7 @@ Here:
 		{
 			if (p[j].ph[0] == format[i] && p[j].ph[1] == format[i + 1])
 			{
-				length += p[j].function(args);
+				length += p[j].function(lot);
 				i = i + 2;
 				goto Here;
 			}

@@ -8,15 +8,15 @@
  */
 int print_revs(va_list lot)
 {
-	char *s = va_arg(args, char*);
+	char *s = va_arg(lot, char*);
 	int i;
 	int v = 0;
 
 	if (s == NULL)
 		s = "(null)";
-	while (s[j] != '\0')
-		j++;
+	while (s[v] != '\0')
+		v++;
 	for (i = v - 1; i >= 0; i--)
-		_print([i]);
+		_print(s[i]);
 	return (v);
 }

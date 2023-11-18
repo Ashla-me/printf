@@ -21,14 +21,14 @@ start = 1;
 if (start)
 {
 r = p >> (31 - i);
-_putchar(r + 48);
+_print(r + 48);
 count++;
 }
 }
 if (count == 0)
 {
 count++;
-_putchar('0');
+_print('0');
 }
 return (count);
 }

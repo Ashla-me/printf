@@ -9,7 +9,7 @@ int print_HEX(va_list lot)
 {
 	int i;
 	int *array;
-	int counter = 0;ZZ
+	int counter = 0;
 		unsigned int num = va_arg(lot, unsigned int);
 	unsigned int tem = num;
 
@@ -28,7 +28,7 @@ int print_HEX(va_list lot)
 		tem /= 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
-	{print
+	{
 		if (array[i] > 9)
 			array[i] = array[i] + 7;
 		_print(array[i] + '0');

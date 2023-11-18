@@ -15,7 +15,7 @@ int print_i(va_list lot)
 
 	if (last < 0)
 	{
-		_putchar('-');
+		_print('-');
 		num = -num;
 		n = -n;
 		last = -last;
@@ -49,7 +49,7 @@ int print_i(va_list lot)
  * Return: integer
  */
 
-int print_d(va_list args)
+int print_d(va_list lot)
 {
 	int n = va_arg(lot, int);
 	int num, last = n % 10, digit;
@@ -61,7 +61,7 @@ int print_d(va_list args)
 
 	if (last < 0)
 	{
-		_putchar('-');
+		_print('-');
 		num = -num;
 		n = -n;
 		last = -last;
