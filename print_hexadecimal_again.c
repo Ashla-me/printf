@@ -29,7 +29,7 @@ for (k = counter - 1; k >= 0; k--)
 {
 if (array[k] > 9)
 array[k] = array[k] + 7;
-_putchar(array[k] + '0');
+_print(array[k] + '0');
 }
 free(array);
 return (counter);

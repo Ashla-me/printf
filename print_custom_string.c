@@ -18,20 +18,20 @@ int print_custom_string(va_list lot)
 	{
 		if (s[i] < 32 || s[i] >= 127)
 		{
-			_putchar('\\');
-			_putchar('x');
+			_print('\\');
+			_print('x');
 			length = length + 2;
 			value = s[i];
 			if (value < 16)
 			{
-				_putchar('0');
+				_print('0');
 				length++;
 			}
 			length = length + print_hex_again(value);
 		}
 		else
 		{
-			_putchar(s[i]);
+			_print(s[i]);
 			length++;
 		}
 	}
