@@ -21,8 +21,6 @@ int print_hex(va_list lot)
 	}
 		counter++;
 		array = malloc(counter * sizeof(int));
-		if (array == NULL)
-			return (NULL);
 
 	for (i = 0; i < counter; i++)
 	{
@@ -33,7 +31,7 @@ int print_hex(va_list lot)
 	for (i = counter - 1; i >= 0; i--)
 	{
 		if (array[i] > 9)
-		array[i] = array[i] + 7;
+		array[i] = array[i] +39;
 		_print(array[i] + '0');
 	}
 		free(array);

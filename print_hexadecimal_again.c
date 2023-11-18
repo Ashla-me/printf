@@ -5,32 +5,33 @@
  * @num: number to print.
  * Return: counter.
  */
-int print_hex_again(unsigned int num)
-{
-int k;
-int *array;
-int counter = 0;
-unsigned int tem = num;
 
-while (num / 16 != 0)
+int print_hex_again(unsigned long int num)
 {
-num /= 16;
-counter++;
-}
-counter++;
-array = malloc(counter *sizeof(int));
+	int k;
+	int *array;
+	int counter = 0;
+	unsigned int tem = num;
 
-for (k = 0; k < counter; k++)
-{
-array[k] = tem % 16;
-tem /= 16;
-}
-for (k = counter - 1; k >= 0; k--)
-{
-if (array[k] > 9)
-array[k] = array[k] + 7;
-_print(array[k] + '0');
-}
-free(array);
-return (counter);
+	while (num / 16 != 0)
+	{
+		num /= 16;
+		counter++;
+	}
+	counter++;
+	array = malloc(counter *sizeof(long int));
+
+	for (k = 0; k < counter; k++)
+	{
+		array[k] = tem % 16;
+		tem /= 16;
+	}
+	for (k = counter - 1; k >= 0; k--)
+	{
+		if (array[k] > 9)
+			array[k] = array[k] + 39;
+		_print(array[k] + '0');
+	}
+	free(array);
+	return(counter);
 }
