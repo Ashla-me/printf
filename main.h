@@ -11,6 +11,10 @@ int _print(char c);
 int print_char(va_list c);
 int print_37(void);
 int print_str(va_list lot);
+int print_hex(va_list lot);
+int print_hex_again(unsigned int num);
+int print_bin(va_list lot);
+int print_custom_string(va_list lot);
 
 int _printf(const char *format, ...);
 #endif

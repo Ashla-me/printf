@@ -5,7 +5,7 @@
  * Return: returns the number of characters
  */
 
-int print_char(va_list c)
+int print_char(va_list lot)
 {
         char s;
 
